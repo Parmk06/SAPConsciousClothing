@@ -1,0 +1,8 @@
+While writing PHP make sure about typo otherwise it will give very big error.
+
+$
+;
+` `
+' '
+Check color of text 
+mysqli
