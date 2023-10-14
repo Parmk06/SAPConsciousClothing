@@ -20,12 +20,12 @@
   object-fit: contain;
 }
 
-.footer {
+/* .footer {
   position: initial;
   justify-content: left;
   bottom: 0;
   background-color: #007bff;
   text-align: left;
   z-index: 10;
-}
+} */
 /* We can remove the Footer here so that we can get same result like Root Index */

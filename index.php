@@ -1,3 +1,10 @@
+<!-- Connect file -->
+<?php
+
+include('includes/connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +29,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <div class="container-fluid p-0">
+<div class="container-fluid p-0">
         <!-- fist child -->
         <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
@@ -94,7 +101,7 @@
 
 <!-- Forth Child -->
 
-<div class="row">
+<div class="row px-1">
 
 
 
@@ -105,23 +112,45 @@
 
      <li class="nav-item bg-info">
       <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
+     </li> 
+
+     <?php
+    
+$select_categories = "Select * from `categories`";
+
+$result_categories = mysqli_query($con,$select_categories);
+// $row_data = mysqli_fetch_assoc($result_categories);
+// echo $row_data['category_title'];
+// echo $row_data['category_title'];
+
+while($row_data = mysqli_fetch_assoc($result_categories)){
+
+  $category_title = $row_data['category_title'];
+  $category_id = $row_data['category_id'];
+  // echo $category_title;
+  echo " <li class='nav-item'>
+  <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
+ </li>";
+}
+ 
+
+?>
+
+     <!-- <li class="nav-item">
+      <a href="#" class="nav-link text-light">Choli_old</a>
      </li>
 
      <li class="nav-item">
-      <a href="#" class="nav-link text-light">Choli</a>
-     </li>
-
-     <li class="nav-item">
-      <a href="#" class="nav-link text-light">Salwar</a>
+      <a href="#" class="nav-link text-light">Salwar_old</a>
      </li>
 
       <li class="nav-item">
-      <a href="#" class="nav-link text-light">Kurti Plazo</a>
+      <a href="#" class="nav-link text-light">Kurti Plazo_old</a>
      </li>
 
      <li class="nav-item">
-      <a href="#" class="nav-link text-light">Sari</a>
-     </li>
+      <a href="#" class="nav-link text-light">Sari_old</a>
+     </li> -->
 
 
      </ul>
@@ -132,98 +161,59 @@
 <div class="col-md-10">
     <div class="row">
 
-    <div class="col-md-4 mb-2">                
+<!-- Fetching Products -->
 
+    <?php
+    $select_query="Select * from `products` order by rand() LIMIT 0,9"; //0 to 9 is limit of products on one page
+    $result_query=mysqli_query($con,$select_query);
+    // $row=mysqli_fetch_assoc($result_query);
+    // echo $row['product_title'];
+    while($row=mysqli_fetch_assoc($result_query)){
+
+      $product_id=$row['product_id'];
+      $product_title=$row['product_title'];
+      $product_description=$row['product_description'];
+      // $product_keywords=$row['product_keywords'];
+      $category_id=$row['category_id'];
+      $product_image=$row['product_image'];
+      $product_price=$row['product_price'];
+
+      echo "<div class='col-md-4 mb-2'>
+            <div class='card'>
+                        <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
+                        <div class='card-body'>
+                        <h5 class='card-title'>$product_title</h5>
+                        <p class='card-text'>$product_description</p>
+                        <a href='#' class='btn btn-info'>Add to cart</a>
+                        <a href='#' class='btn btn-secondary'>View more</a>
+                        </div>
+        </div>
+      </div>";
+      // We can remove "<a href='#' class='btn btn-secondary'>View more</a>" as we will not have other pictures to view more
+      
+    }
+
+
+
+
+    ?>
+
+    <!-- <div class="col-md-4 mb-2">
     <div class="card">
-  <img src="./images/royal-choli.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
+                      <img src="./images/royal-choli.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-info">Add to cart</a>
+                      <a href="#" class="btn btn-secondary">View more</a>
+                      </div>
+      </div>
+    </div>  -->
 
-  </div>
-</div>
-
-    </div> 
-
-    <div class="col-md-4 mb-2">
-
-    <div class="card">
-  <img src="./images/Sblackandwhite-choli.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>    
-  </div>
-</div>
-
-    </div>  
-    
-    <div class="col-md-4 mb-2">
-
-    <div class="card">
-  <img src="./images/Spink-orange-choli.jpeg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>    
-  </div>
-</div>
-    </div>  
-
-
-
-    <div class="col-md-4 mb-2">
-
-    <div class="card">
-  <img src="./images/red-orange.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>    
-  </div>
-</div>
-    </div>  
-
-
-
-
-    <div class="col-md-4 mb-2">
-
-    <div class="card">
-  <img src="./images/colorful.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>    
-  </div>
-</div>
-    </div>    
-
-
-
-    <div class="col-md-4 mb-2">
-
-    <div class="card">
-  <img src="./images/red-suit.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>    
-  </div>
-</div>
-    </div>  
-
-
-
-
+<!-- row end -->
     </div>
+
+<!-- col end -->
   </div>
 
 
@@ -247,7 +237,7 @@
 
 
 
-    </div>
+</div>
 
 <!-- bootstrap JS link -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
