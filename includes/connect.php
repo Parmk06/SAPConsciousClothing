@@ -1,8 +1,8 @@
 <?php
 
-$con=mysqli_connect('localhost','root','','mystore');
+$con=mysqli_connect('localhost','root','','sap_store');
 if($con){
-   echo " die(mysqli_error($con));";
+   die(mysqli_error($con));
 }
 ?>
 
