@@ -2,7 +2,7 @@
   //including connect file
 
   include('./includes/connect.php');
-  include('functions/common_function.php');
+  
 
   //getting products
   function getproducts(){

@@ -57,27 +57,20 @@
             </div>
 
             <div class="button text-center ">
-                <button class="my-3"><a href="insert_product.php" class="nav-link text-light bg-info my-1">Insert Products</a></button>
-
+                <button class="my-3"><a href="" class="nav-link text-light bg-info my-1">Insert Products</a></button>
                 <button><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
-
                 <button><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
-
                 <button><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
-
                 <button><a href="" class="nav-link text-light bg-info my-1">All Orders</a></button>
-
                 <button><a href="" class="nav-link text-light bg-info my-1">All Payments</a></button>
-
                 <button><a href="" class="nav-link text-light bg-info my-1">List Users</a></button>
-
                 <button><a href="" class="nav-link text-light bg-info my-1">Logout</a></button> 
             </div>
         </div>
     </div>
 
      <!-- fourth Child -->
-     <div class="container my-3">
+     <div class="container my-5">
         <!---we are inserting the created variable here only if the get variable is active-->
         <?php
         if(isset($_GET['insert_category'])){
@@ -89,11 +82,8 @@
 
 
 <!-- Last Child -->
-
-<!-- <div class="bg-info p-3 text-right footer">  -->    <!-- This line was written before seems wrong-->
-
-<div class="bg-info p-3 text-right">
-<p>© SAP - All Rights Reserved.</p>
+<div class="bg-info p-3 text-right footer">
+  <p>© SAP - All Rights Reserved.</p>
 </div>
 
 

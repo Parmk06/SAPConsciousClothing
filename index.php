@@ -1,10 +1,3 @@
-<!-- Connect file -->
-<?php
-
-include('includes/connect.php');
-include('functions/common_function.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +22,7 @@ include('functions/common_function.php');
 </head>
 <body>
     <!-- navbar -->
-<div class="container-fluid p-0">
+    <div class="container-fluid p-0">
         <!-- fist child -->
         <nav class="navbar navbar-expand-lg bg-info">
   <div class="container-fluid">
@@ -86,6 +79,10 @@ include('functions/common_function.php');
 </li>
 </ul>
 </nav>
+
+
+
+
 <!-- Third Child -->
 <div class="bg-light">
   <h3 class="text-center">SAP Conscious Clothing</h3>
@@ -93,38 +90,38 @@ include('functions/common_function.php');
 </div>
 
 
+
+
 <!-- Forth Child -->
 
-<div class="row px-1">
+<div class="row">
 
- <!-- Side Nav -->
+
+
+
+    <!-- Side Nav -->
 <div class="col-md-2 bg-secondary p-0">
      <ul class="navbar-nav me-auto text-center">  
 
      <li class="nav-item bg-info">
       <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
-     </li> 
-
-  <?php
-  getcategories()
-
-  ?>
-
-     <!-- <li class="nav-item">
-      <a href="#" class="nav-link text-light">Choli_old</a>
      </li>
 
      <li class="nav-item">
-      <a href="#" class="nav-link text-light">Salwar_old</a>
+      <a href="#" class="nav-link text-light">Choli</a>
+     </li>
+
+     <li class="nav-item">
+      <a href="#" class="nav-link text-light">Salwar</a>
      </li>
 
       <li class="nav-item">
-      <a href="#" class="nav-link text-light">Kurti Plazo_old</a>
+      <a href="#" class="nav-link text-light">Kurti Plazo</a>
      </li>
 
      <li class="nav-item">
-      <a href="#" class="nav-link text-light">Sari_old</a>
-     </li> -->
+      <a href="#" class="nav-link text-light">Sari</a>
+     </li>
 
 
      </ul>
@@ -135,28 +132,98 @@ include('functions/common_function.php');
 <div class="col-md-10">
     <div class="row">
 
-<!-- Fetching Products -->
+    <div class="col-md-4 mb-2">                
 
-    <?php
-       getproducts();
-     ?>
-
-    <!-- <div class="col-md-4 mb-2">
     <div class="card">
-                      <img src="./images/royal-choli.jpeg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-info">Add to cart</a>
-                      <a href="#" class="btn btn-secondary">View more</a>
-                      </div>
-      </div>
-    </div>  -->
+  <img src="./images/royal-choli.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-info">Add to cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>
 
-<!-- row end -->
+  </div>
+</div>
+
+    </div> 
+
+    <div class="col-md-4 mb-2">
+
+    <div class="card">
+  <img src="./images/Sblackandwhite-choli.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-info">Add to cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>    
+  </div>
+</div>
+
+    </div>  
+    
+    <div class="col-md-4 mb-2">
+
+    <div class="card">
+  <img src="./images/Spink-orange-choli.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-info">Add to cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>    
+  </div>
+</div>
+    </div>  
+
+
+
+    <div class="col-md-4 mb-2">
+
+    <div class="card">
+  <img src="./images/red-orange.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-info">Add to cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>    
+  </div>
+</div>
+    </div>  
+
+
+
+
+    <div class="col-md-4 mb-2">
+
+    <div class="card">
+  <img src="./images/colorful.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-info">Add to cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>    
+  </div>
+</div>
+    </div>    
+
+
+
+    <div class="col-md-4 mb-2">
+
+    <div class="card">
+  <img src="./images/red-suit.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-info">Add to cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>    
+  </div>
+</div>
+    </div>  
+
+
+
+
     </div>
-
-<!-- col end -->
   </div>
 
 
@@ -180,7 +247,7 @@ include('functions/common_function.php');
 
 
 
-</div>
+    </div>
 
 <!-- bootstrap JS link -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
