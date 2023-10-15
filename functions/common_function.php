@@ -1,11 +1,11 @@
 <?php
-//including connect file
+  //including connect file
 
-include('../includes/connect.php');
-include('functions/common_function.php');
+  include('../includes/connect.php');
+  include('functions/common_function.php');
 
-//getting products
-function getproducts(){
+  //getting products
+  function getproducts(){
     $select_query="Select * from `products` order by rand() LIMIT 0,9"; //0 to 9 is limit of products on one page
     $result_query=mysqli_query($con,$select_query);
     // $row=mysqli_fetch_assoc($result_query);
@@ -28,11 +28,11 @@ function getproducts(){
                         <p class='card-text'>$product_description</p>
                         <a href='#' class='btn btn-info'>Add to cart</a>
                         <a href='#' class='btn btn-secondary'>View more</a>
-               </div>
-            </div>
-    </div>;
-   
+                        </div>
+        </div>
+      </div>";
+     
+      
     }
   }
-
-?>    
+?>
