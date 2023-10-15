@@ -28,11 +28,11 @@ function getproducts(){
                         <p class='card-text'>$product_description</p>
                         <a href='#' class='btn btn-info'>Add to cart</a>
                         <a href='#' class='btn btn-secondary'>View more</a>
-                        </div>
-        </div>
+               </div>
+            </div>
     </div>;
    
     }
   }
-?>
-    
+
+?>    
