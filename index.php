@@ -2,7 +2,7 @@
 <?php
 
 include('includes/connect.php');
-
+include('functions/common_function.php');
 ?>
 
 <!DOCTYPE html>
@@ -155,7 +155,7 @@ while($row_data = mysqli_fetch_assoc($result_categories)){
 <!-- Fetching Products -->
 
     <?php
-       getProducts();
+       getproducts();
      ?>
 
     <!-- <div class="col-md-4 mb-2">

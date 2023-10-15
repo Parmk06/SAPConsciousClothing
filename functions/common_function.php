@@ -1,11 +1,12 @@
 <?php
   //including connect file
 
-  include('../includes/connect.php');
+  include('./includes/connect.php');
   include('functions/common_function.php');
 
   //getting products
   function getproducts(){
+    global $con;
     $select_query="Select * from `products` order by rand() LIMIT 0,9"; //0 to 9 is limit of products on one page
     $result_query=mysqli_query($con,$select_query);
     // $row=mysqli_fetch_assoc($result_query);
