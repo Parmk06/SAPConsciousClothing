@@ -105,27 +105,10 @@ include('functions/common_function.php');
       <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
      </li> 
 
-     <?php
-    
-$select_categories = "Select * from `categories`";
+  <?php
+  getcategories()
 
-$result_categories = mysqli_query($con,$select_categories);
-// $row_data = mysqli_fetch_assoc($result_categories);
-// echo $row_data['category_title'];
-// echo $row_data['category_title'];
-
-while($row_data = mysqli_fetch_assoc($result_categories)){
-
-  $category_title = $row_data['category_title'];
-  $category_id = $row_data['category_id'];
-  // echo $category_title;
-  echo " <li class='nav-item'>
-  <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
- </li>";
-}
- 
-
-?>
+  ?>
 
      <!-- <li class="nav-item">
       <a href="#" class="nav-link text-light">Choli_old</a>
