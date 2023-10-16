@@ -71,10 +71,12 @@ include('functions/common_function.php');
     </div>
   </div>
 </nav>
-<!-----calling cart function-------->
+<!----calling cart function--->
 <?php
 cart();
 ?>
+
+
 
 
 <!-- Second Child -->
@@ -148,17 +150,45 @@ cart();
     <!-- Products -->
 <div class="col-md-10">
     <div class="row">
+        
+    <div class="col-md-4">
+        <!---card--->
+        <div class='card'>
+            <img src='./images/colorful.jpg'
+            class='card-img-top' alt='$product_title'>
+            <div class='card-body'>
+            <h5 class='card-title'>$product_title</h5>
+            <p class='card-text'>$product_description</p>
+            <a href='#' class='btn btn-info'>Add to cart</a>
+            <a href='product_details.php?product_id=$product_id'class='btn btn-secondary' class='btn btn-secondary'>View more</a>
+            </div>
+        </div>
+   </div>
+   <div class="col-md-8">
+       <!---related images-->
+       <div class ="row">
+        <div class="col-md-12">
+            <h4 class ="text-center text-info mb-5">Related products</h4>
+       </div>
+       <div class = "col-md-6">
+        <img src='./images/colorful.jpg' class='card-img-top' alt='$product_title'>
+      </div>
+      <div class = "col-md-6">
+      <img src='./images/red-suit.jpg' class='card-img-top' alt='$product_title'>
+      </div>
+  </div>
+ 
 
 <!-- Fetching Products -->
 
     <?php
 
-    // Calling functins  
-    getproducts(); 
+    // Calling functins   
+    view_details();
     get_unique_categories();
-    $ip = getIPAddress();
-    echo 'User Real IP Address - '.$ip;
-       ?>
+
+  
+    ?>
 
     <!-- <div class="col-md-4 mb-2">
     <div class="card">
